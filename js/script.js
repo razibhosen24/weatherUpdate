@@ -1,4 +1,4 @@
-// https://api.openweathermap.org/data/2.5/weather?q=Khulna&appid=ad1987b812406922db28731ceb6db4c5&units=metric
+
 
 const apikey = "ad1987b812406922db28731ceb6db4c5";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
@@ -9,7 +9,7 @@ const weatherIcon = document.querySelector(".weather img");
 async function checkWeather(city){
     const response = await fetch( apiUrl + city + `&appid=${apikey}`);
     const data = await response.json();
-    console.log(data);
+ 
 
     document.querySelector(".city").innerText = data.name;
     document.querySelector(".temp").innerText = Math.round(data.main.temp) + "°C";
